@@ -5,22 +5,19 @@ class CountTimer{
         this.pauseButton   = pauseButton;
 
         this.startButton.addEventListener('click',this.start);
-
-
-
     }
-start() {
-    console.log(this)
-}
-}
 
+start = () => {
+   
+};
+}
 const durationInput = document.querySelector('#duration');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 
+ const countTimer = new CountTimer(durationInput,startButton,pauseButton);
 
-const countTimer = new CountTimer(durationInput,startButton,pauseButton);
-// countTimer.start();
+ // countTimer.start();
 
 // Explanation
 // console.log(this);
@@ -35,17 +32,22 @@ const countTimer = new CountTimer(durationInput,startButton,pauseButton);
 
 // ahmed();
 
-const colors = {
-    printColor(){
-        console.log(this)
+// const colors = {
+//     printColor(){
+//         console.log(this)
 
-    }
+//     }
 
-};
+// };
 
-const randomObjct = {
-    c:4
-}
+// const randomObjct = {
+//     c:4
+// }
 
-randomObjct.printColor = colors.printColor;
-randomObjct.printColor();
+// randomObjct.printColor = colors.printColor;
+// randomObjct.printColor();
+
+// const umuAhmed = function () {
+//     console.log(this);
+// }
+// umuAhmed();
