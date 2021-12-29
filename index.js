@@ -1,21 +1,29 @@
-class CountTimer{
-    constructor(durationInput,startButton,pauseButton){
-        this.durationInput = durationInput;
-        this.startButton   = startButton;
-        this.pauseButton   = pauseButton;
 
-        this.startButton.addEventListener('click',this.start);
-    }
-
-start = () => {
-   
-};
-}
 const durationInput = document.querySelector('#duration');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
+const circle = document.querySelector('circle');
+const perimeter = circle.getAttribute('r') * 2 * Math.PI;
+circle.setAttribute('stroke-dasharray',perimeter)
 
- const countTimer = new CountTimer(durationInput,startButton,pauseButton);
+let duration;
+ const countTimer = new CountTimer(durationInput,startButton,pauseButton, {
+     onStart(totalduration) {
+        duration = totalduration
+     },
+     onTick(timeRemaining) {
+        circle.setAttribute('stroke-dashoffset', 
+        
+        perimeter * timeRemaining / duration - perimeter
+        );
+       
+
+     },
+     onComplete(){
+         console.log('timer is complete!');
+
+     }
+ });
 
  // countTimer.start();
 
