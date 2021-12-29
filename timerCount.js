@@ -12,14 +12,12 @@ class CountTimer{
         this.startButton.addEventListener('click',this.start);
         this.pauseButton.addEventListener('click',this.pause);
     }
-
 start = () => {
     if (this.onStart){
         this.onStart(this.timeRemaining);
     }
     this.tick();
     this.intervalId = setInterval(this.tick, 50)
-
 }; 
 pause = () => {
     clearInterval(this.intervalId); 
@@ -37,7 +35,6 @@ tick =() => {
         }
 
     }
-
 }
 get timeRemaining() {
     return parseFloat(this.durationInput.value);

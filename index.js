@@ -1,4 +1,3 @@
-
 const durationInput = document.querySelector('#duration');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
@@ -16,46 +15,9 @@ let duration;
         
         perimeter * timeRemaining / duration - perimeter
         );
-       
-
      },
      onComplete(){
          console.log('timer is complete!');
 
      }
  });
-
- // countTimer.start();
-
-// Explanation
-// console.log(this);
-
-// const printThis = () => {
-//     console.log(this);
-// }
-
-// const ahmed = function () {
-//         console.log(this);    
-// };
-
-// ahmed();
-
-// const colors = {
-//     printColor(){
-//         console.log(this)
-
-//     }
-
-// };
-
-// const randomObjct = {
-//     c:4
-// }
-
-// randomObjct.printColor = colors.printColor;
-// randomObjct.printColor();
-
-// const umuAhmed = function () {
-//     console.log(this);
-// }
-// umuAhmed();
